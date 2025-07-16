@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  nextjs-app:
+    build:
+      context: ./next-search-github-rep
+      dockerfile: ../docker/http/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    volumes:
+      - .:/next-search-github-rep/app
+      - /app/node_modules
+    restart: always
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./docker/http/nginx.conf:/etc/nginx/nginx.conf:ro # ← ここを修正
+    depends_on:
+      - nextjs-app
+    restart: always

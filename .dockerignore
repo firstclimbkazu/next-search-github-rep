@@ -1,0 +1,11 @@
+.git
+next-search-github-rep/.next/
+next-search-github-rep/node_modules/
+next-search-github-rep/npm-debug.log
+next-search-github-rep/yarn-debug.log
+next-search-github-rep/yarn-error.log
+next-search-github-rep/.env
+next-search-github-rep/.env.local
+next-search-github-rep/.env.development.local
+next-search-github-rep/.env.test.local
+.DS_Store

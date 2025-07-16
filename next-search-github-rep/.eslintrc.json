@@ -1,0 +1,7 @@
+// .eslintrc.json
+{
+  "extends": ["next/core-web-vitals", "prettier"],
+  "rules": {
+    // 必要に応じてカスタムルールを追加
+  }
+}
