@@ -33,7 +33,7 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/static ./.next/static
 
 # 環境変数 (本番環境ではDocker Composeなどで設定することが多い)
-ENV NODE_ENV production
+# ENV NODE_ENV production
 # Next.jsのデフォルトポート
 EXPOSE 3000
 
