@@ -42,6 +42,6 @@
     "**/*.md",
     "**/*.mdx",
     ".next/types/**/*.ts"
-  ],
+, "vitest.config.mts"  ],
   "exclude": ["node_modules", ".next"]
 }
