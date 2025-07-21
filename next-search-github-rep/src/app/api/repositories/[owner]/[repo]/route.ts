@@ -1,8 +1,7 @@
 // src/app/api/repositories/[owner]/[repo]/route.ts
 
 import { NextRequest, NextResponse } from 'next/server';
-import type { GitHubRepo } from '@/src/app/types/GitHubRepo'; // GitHubリポジトリの型定義をインポート
-import type { RepoDetailPageProps } from '@/src/app/[owner]/[repo]/page'; // ページコンポーネントのProps型をインポート
+import type { RepoDetailPageProps } from '@/app/[owner]/[repo]/page'; // ページコンポーネントのProps型をインポート
 
 // GitHub APIのベースURL
 const GITHUB_API_BASE_URL = process.env.NEXT_PUBLIC_GITHUB_API_URL || 'https://api.github.com';

@@ -1,7 +1,7 @@
 // src/app/api/repositories/route.ts
 
 import { NextRequest, NextResponse } from 'next/server';
-import type { GitHubRepo } from '@/src/app/types/GitHubRepo'; // GitHubリポジトリの型定義をインポート
+import type { GitHubRepo } from '@/app/types/GitHubRepo'; // GitHubリポジトリの型定義をインポート
 
 // GitHub APIのベースURL
 const GITHUB_API_BASE_URL = process.env.NEXT_PUBLIC_GITHUB_API_URL || 'https://api.github.com';
