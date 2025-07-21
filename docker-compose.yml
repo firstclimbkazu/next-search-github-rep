@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   nextjs-app:
     build:
@@ -7,13 +5,16 @@ services:
       dockerfile: ../docker/http/Dockerfile
     ports:
       - "3000:3000"
+    # 開発時にはNODE_ENVは自動で'development'になるためコメントアウトします
     environment:
-      - NODE_ENV=production
-      - PORT=3000
+      - NODE_ENV=development
     volumes:
-      - .:/next-search-github-rep/app
-      - /app/node_modules
-    restart: always
+      # ホストのNext.jsソースコードをコンテナの作業ディレクトリ（/appと仮定）にマウントします
+      - ./next-search-github-rep:/app
+      # ホストのnode_modulesでコンテナ内を上書きしないようにするための設定です
+      - /app/node_modules 
+    # コンテナ起動時に開発サーバーを起動するコマンドを指定します
+    command: sh -c "npm install && npm run dev"
 
   nginx:
     image: nginx:latest

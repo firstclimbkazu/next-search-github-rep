@@ -1,0 +1,18 @@
+# 開発環境用のDockerfile
+
+# 本番環境とNode.jsのバージョンを合わせます
+FROM node:20-alpine
+
+# コンテナ内の作業ディレクトリを設定
+WORKDIR /app
+
+# 依存関係の変更がない限り`npm install`が再実行されないように、
+# package.jsonを先にコピーします。
+COPY package*.json ./
+
+# 開発用の依存関係も含めて全てインストールします
+RUN npm install
+
+# ソースコードの変更はdocker-composeのvolumesでマウントされるため、
+# ここでCOPYする必要はありません。
+# コンテナ起動時のコマンドはdocker-compose.ymlで指定します。
