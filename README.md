@@ -1,4 +1,4 @@
-# GitHub Repository Search
+# GitHub リポジトリ検索アプリ
 
 ## 概要 (Overview)
 
