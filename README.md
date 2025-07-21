@@ -1,5 +1,7 @@
 # GitHub リポジトリ検索アプリ
 
+https://github.com/user-attachments/assets/7ca7e2c8-4a22-47fd-bed6-550eb2ce338d
+
 ## 概要 (Overview)
 
 GitHub APIを利用して、キーワードに一致するリポジトリを検索・表示するWebアプリケーションです。Next.js 14のApp RouterやVitestによるテストなど、モダンな技術スタックを用いて開発しました。
