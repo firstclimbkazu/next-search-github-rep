@@ -46,7 +46,7 @@ GitHub APIを利用して、キーワードに一致するリポジトリを検�
 
 1.  **リポジトリをクローン**
     ```bash
-    git clone https://github.com/your-username/next-search-github-rep.git
+    git clone https://github.com/firstclimbkazu/next-search-github-rep.git
     cd next-search-github-rep
     ```
 
